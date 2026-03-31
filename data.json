@@ -1,0 +1,105 @@
+{
+  "north_star": {
+    "purpose": "IT är en strategisk möjliggörare som driver affärsvärde genom säkra, skalbara och datadrivna lösningar",
+    "direction": "Vi bygger en modern, sammanhållen IT-plattform som gör det enkelt för verksamheten att innovera snabbt och säkert",
+    "optimize_for": [
+      "Leveranshastighet",
+      "Driftstabilitet",
+      "Datadriven insikt"
+    ]
+  },
+  "principles": [
+    {
+      "name": "API-first",
+      "description": "Alla tjänster och system exponeras via väldefinierade API:er. Integration sker aldrig direkt mot databaser eller interna strukturer. API:et är kontraktet — stabilt, versionerat och dokumenterat."
+    },
+    {
+      "name": "Säkerhet by design",
+      "description": "Säkerhet byggs in från start, inte som ett eftertanke. Varje ny lösning genomgår en säkerhetsgranskning innan driftsättning. Vi tillämpar principen om minsta möjliga behörighet (least privilege) i alla system."
+    },
+    {
+      "name": "Cloud-native",
+      "description": "Vi designar för molnet — med automatisk skalning, containerisering och infrastruktur som kod. On-premise är undantaget, inte regeln. Vi utnyttjar molntjänsternas inbyggda resiliens och elasticitet."
+    },
+    {
+      "name": "Datadrivet beslutsfattande",
+      "description": "Beslut fattas baserade på data, inte magkänsla. Varje system som skapas ska kunna mätas. Vi exponerar mätvärden, loggar och händelser som en del av leveransen — inte som ett tillägg."
+    },
+    {
+      "name": "Enkelhet framför komplexitet",
+      "description": "Den enklaste lösningen som löser problemet är den rätta lösningen. Vi undviker över-ingenjörskap. En lösning är klar inte när det inte finns mer att lägga till, utan när det inte finns mer att ta bort."
+    },
+    {
+      "name": "Hållbar teknikvalsskuld",
+      "description": "Vi väljer teknik medvetet och dokumenterar varför. Tekniska beslut utvärderas regelbundet. Vi tar ansvar för att fasa ut föråldrade system i ordnad takt — teknisk skuld är acceptabel om den är synlig och planerad."
+    }
+  ],
+  "focus_areas": [
+    {
+      "name": "Plattform & Infrastruktur",
+      "description": "Bygga en stabil, skalbar och automatiserad teknisk grund som alla andra team kan bygga på — med CI/CD, observabilitet och självbetjäning i centrum."
+    },
+    {
+      "name": "Data & Insikt",
+      "description": "Göra data tillgänglig, pålitlig och förståelig för hela verksamheten — från rådata till beslutsstöd och prediktiv analys."
+    },
+    {
+      "name": "Digitala tjänster",
+      "description": "Leverera moderna, användarvänliga digitala upplevelser för både interna medarbetare och externa kunder — snabbt och med hög kvalitet."
+    },
+    {
+      "name": "Säkerhet & Compliance",
+      "description": "Säkerställa att IT-miljön uppfyller regulatoriska krav och interna riktlinjer — med proaktiv riskhantering och tydlig ansvarsfördelning."
+    }
+  ],
+  "departments": [
+    {
+      "name": "Plattform & DevOps",
+      "mission": "Tillhandahålla en pålitlig, automatiserad och skalbar teknisk plattform som möjliggör snabb och säker leverans för alla utvecklingsteam.",
+      "current_state": "Fragmenterad infrastruktur med manuella driftsättningsprocesser. Hög beroende av enskilda individers kunskap. Begränsad observabilitet och larm.",
+      "target_state": "Fullt automatiserad CI/CD-pipeline. Infrastruktur som kod (IaC) för all miljö. Centraliserad observabilitet med realtidsövervakning och automatiska larm.",
+      "initiatives": [
+        "Migrera alla applikationer till Kubernetes-kluster",
+        "Implementera GitOps-arbetsflöde med Argo CD",
+        "Bygga centralt observabilitetsplattform (Grafana + Prometheus)",
+        "Introducera intern developer portal (Backstage)"
+      ],
+      "dependencies": [
+        "Säkerhet & Compliance",
+        "Data & Analys"
+      ]
+    },
+    {
+      "name": "Data & Analys",
+      "mission": "Göra rätt data tillgänglig för rätt person vid rätt tillfälle — med hög datakvalitet, tydlig ägarskap och självbetjäning för verksamheten.",
+      "current_state": "Datapipelines är manuella och svåra att underhålla. Datastyrning saknas formellt. Analytiker spenderar mer tid på att hämta data än att analysera den.",
+      "target_state": "Modern dataplattform med automatiserade pipelines, datakatalog och self-service BI. Tydliga datadomäner med utsedda dataägare per område.",
+      "initiatives": [
+        "Etablera data mesh-arkitektur med tydliga datadomäner",
+        "Migrera till molnbaserat datalager (Snowflake/BigQuery)",
+        "Implementera datakatalog med lineage-spårning",
+        "Lansera self-service BI-portal för verksamheten"
+      ],
+      "dependencies": [
+        "Plattform & DevOps",
+        "Applikationer & Integration"
+      ]
+    },
+    {
+      "name": "Applikationer & Integration",
+      "mission": "Leverera och förvalta moderna affärsapplikationer och integrationslösningar som stödjer verksamhetens processer och digitala transformation.",
+      "current_state": "Heterogen applikationsportfölj med många point-to-point-integrationer. Hög underhållskostnad. Låg grad av återanvändning och standardisering.",
+      "target_state": "API-driven integrationsarkitektur med ett API-gateway som centralt nav. Moderniserad applikationsportfölj med tydliga livscykelbeslut per system.",
+      "initiatives": [
+        "Implementera enterprise API-gateway (Kong/Azure APIM)",
+        "Kartlägga och prioritera applikationsportföljens moderniseringsbehov",
+        "Migrera 3 legacy-system till molnbaserade SaaS-alternativ",
+        "Etablera integrationsmönster och -riktlinjer för hela organisationen"
+      ],
+      "dependencies": [
+        "Plattform & DevOps",
+        "Säkerhet & Compliance"
+      ]
+    }
+  ]
+}

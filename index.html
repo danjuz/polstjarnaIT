@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Polstjärna: IT Alignment Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="pw-gate" id="pw-gate">
+    <div class="pw-box">
+      <div class="pw-logo">IT Alignment Portal</div>
+      <p class="pw-label">Ange lösenord för att fortsätta</p>
+      <div class="pw-row">
+        <input class="pw-input" id="pw-input" type="password" placeholder="Lösenord" autocomplete="off" />
+        <button class="pw-btn" id="pw-btn">Öppna</button>
+      </div>
+      <p class="pw-error" id="pw-error"></p>
+    </div>
+  </div>
+
+  <div class="wip-banner">Under arbete, ej för distribution</div>
+
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <span class="site-logo">IT Alignment Portal</span>
+      <nav class="site-nav" id="site-nav">
+        <a href="#section-problem">Varför</a>
+        <a href="#section-model">Modellen</a>
+        <a href="#section-northstar">Polstjärnan</a>
+        <a href="#section-departments">Avdelningar</a>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Öppna meny" aria-expanded="false">
+        <span id="nav-toggle-icon"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ── HERO ────────────────────────────────────────────────── -->
+    <section class="hero-section" id="section-hero">
+      <div class="container">
+        <div class="hero-label" id="hero-label"></div>
+        <h1 class="hero-quote" id="hero-quote">Laddar…</h1>
+        <p class="hero-subtitle" id="hero-subtitle"></p>
+        <div class="onboarding-block" id="onboarding-block"></div>
+      </div>
+    </section>
+
+    <!-- ── PROBLEM ──────────────────────────────────────────────── -->
+    <section class="page-section" id="section-problem">
+      <div class="container section">
+        <div class="section-label">Utmaningen</div>
+        <h2 class="section-title">Varför vi gör detta</h2>
+        <div class="problem-grid">
+          <div class="problem-col">
+            <div class="problem-col-header problem-header-red">
+              <span class="problem-col-icon" id="icon-symptom"></span>
+              <span>Vi ser idag</span>
+            </div>
+            <ul class="problem-list" id="problems-list"></ul>
+          </div>
+          <div class="problem-col">
+            <div class="problem-col-header problem-header-dark">
+              <span class="problem-col-icon" id="icon-consequences"></span>
+              <span>Det leder till</span>
+            </div>
+            <ul class="problem-list" id="consequences-list"></ul>
+          </div>
+        </div>
+        <div class="core-message-block" id="core-message"></div>
+      </div>
+    </section>
+
+    <!-- ── MODELLEN ─────────────────────────────────────────────── -->
+    <section class="page-section page-section--alt" id="section-model">
+      <div class="container section">
+        <div class="section-label">Modellen</div>
+        <h2 class="section-title">Hur vi alignar, uppifrån och ned</h2>
+        <p class="section-desc">Tre lager, tre ägarskap, en gemensam riktning. Varje lager konkretiserar det ovanstående.</p>
+        <div class="thread-block">
+          <div class="thread-row">
+            <div class="thread-layer-meta">
+              <span class="thread-layer-name">Polstjärnan</span>
+              <span class="thread-layer-owner">Ägs av IT-ledning</span>
+            </div>
+            <p class="thread-layer-desc">Sätter riktningen: varför IT finns, vart vi är på väg och vad vi optimerar för. Stable och långsiktig.</p>
+          </div>
+          <div class="thread-connector">Konkretiseras i</div>
+          <div class="thread-row">
+            <div class="thread-layer-meta">
+              <span class="thread-layer-name">Principerna</span>
+              <span class="thread-layer-owner">Ägs av chefsarkitekt</span>
+            </div>
+            <p class="thread-layer-desc">Beskriver hur vi bygger och beslutar för att nå dit. Plattformens karaktär och tekniska beslutsnormer.</p>
+          </div>
+          <div class="thread-connector">Omsätts i</div>
+          <div class="thread-row">
+            <div class="thread-layer-meta">
+              <span class="thread-layer-name">Avdelningarnas bidrag</span>
+              <span class="thread-layer-owner">Ägs av avdelningschefer</span>
+            </div>
+            <p class="thread-layer-desc">Initiativ och aktiviteter som levererar mot principerna och Polstjärnan. Uppdateras kvartalsvis.</p>
+          </div>
+        </div>
+        <div class="model-diagram">
+          <div class="model-node model-node-star">
+            <div class="model-node-icon" id="model-star-icon"></div>
+            <div class="model-node-title">Polstjärna</div>
+            <div class="model-node-sub">Varför vi finns &amp; vart vi ska, sätts av IT-ledning</div>
+          </div>
+          <div class="model-arrow-down">↓</div>
+          <div class="model-node model-node-principles">
+            <div class="model-node-title">Vägledande principer</div>
+            <div class="model-node-sub">Hur vi tänker &amp; bygger, sätts av chefsarkitekt</div>
+          </div>
+          <div class="model-arrow-down">↓</div>
+          <div class="model-dept-row" id="model-dept-row"></div>
+          <div class="model-arrow-down">↓</div>
+          <div class="model-node model-node-result">
+            <div class="model-node-title">Gemensam riktning</div>
+            <div class="model-node-sub">Hela IT drar åt samma håll</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── POLSTJÄRNA ────────────────────────────────────────────── -->
+    <section class="page-section" id="section-northstar">
+      <div class="container section">
+        <div class="section-label">Vår gemensamma riktning</div>
+        <div class="example-notice" id="example-notice-ns"></div>
+        <div class="scope-hint" id="ns-scope"></div>
+        <div class="northstar-card">
+          <div class="northstar-star" id="ns-star-icon"></div>
+          <h2 id="ns-purpose" class="ns-purpose">Laddar…</h2>
+          <p id="ns-direction" class="ns-direction"></p>
+          <div class="ns-optimize-row">
+            <span class="ns-optimize-label">Vi optimerar för:</span>
+            <div id="ns-tags" class="ns-tags"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PRINCIPER ─────────────────────────────────────────────── -->
+    <section class="page-section page-section--alt" id="section-principles">
+      <div class="container section">
+        <div class="section-label">Vägledande principer</div>
+        <h2 class="section-title">Hur vi fattar beslut</h2>
+        <p class="section-desc">Principerna konkretiserar Polstjärnan. De beskriver hur vi tänker, bygger och beslutar för att nå dit. Varje avdelnings initiativ ska kunna spåras tillbaka hit.</p>
+        <div class="example-notice" id="example-notice-icon"></div>
+        <div class="scope-hint" id="principles-scope"></div>
+        <div id="principles-list" class="principles-list"></div>
+      </div>
+    </section>
+
+    <!-- ── FOKUSOMRÅDEN ──────────────────────────────────────────── -->
+    <section class="page-section" id="section-focus">
+      <div class="container section">
+        <div class="section-label">Fokusområden</div>
+        <h2 class="section-title">Vad vi prioriterar</h2>
+        <p class="section-desc">Fyra områden där IT levererar störst värde. Varje avdelning bidrar till ett eller flera av dessa.</p>
+        <div class="example-notice" id="example-notice-focus"></div>
+        <div id="focus-grid" class="focus-grid"></div>
+      </div>
+    </section>
+
+    <!-- ── AVDELNINGAR ───────────────────────────────────────────── -->
+    <section class="page-section page-section--alt" id="section-departments">
+      <div class="container section">
+        <div class="section-label">Avdelningar</div>
+        <h2 class="section-title">Vem bidrar med vad</h2>
+        <p class="section-desc">Här omsätts Polstjärnan och principerna i konkret handling. Varje avdelning visar hur deras initiativ och aktiviteter bidrar till helheten.</p>
+        <div class="example-notice" id="example-notice-dept"></div>
+        <div id="departments-grid" class="departments-grid"></div>
+      </div>
+    </section>
+
+    <!-- ── LEVANDE MODELL ───────────────────────────────────────── -->
+    <section class="page-section" id="section-lifecycle">
+      <div class="container section">
+        <div class="section-label">Driftsmodell</div>
+        <h2 class="section-title">Hur vi håller riktningen levande</h2>
+        <p class="lc-intro" id="lc-intro"></p>
+        <div id="lc-loop"></div>
+        <div class="lc-bottom">
+          <div class="lc-bottom-col">
+            <h3 class="lc-sub-title">Vår arbetsrytm</h3>
+            <div id="lc-rhythm"></div>
+          </div>
+          <div class="lc-bottom-col">
+            <h3 class="lc-sub-title">Ansvar i modellen</h3>
+            <div id="lc-roles"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── UPPDRAG / CTA ─────────────────────────────────────────── -->
+    <section class="page-section page-section--alt" id="section-cta">
+      <div class="container section">
+        <div class="section-label">Nästa steg</div>
+        <h2 class="section-title" id="cta-headline"></h2>
+        <div class="cta-block">
+          <blockquote class="cta-quote" id="cta-quote"></blockquote>
+          <div class="cta-tasks-label">Ni ska ta fram:</div>
+          <ol class="cta-tasks-list" id="cta-tasks-list"></ol>
+          <div class="cta-constraints" id="cta-constraints"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FÖRDJUPNING ───────────────────────────────────────────── -->
+    <section class="page-section" id="section-fordj">
+      <div class="container section">
+        <div class="section-label">Fördjupning</div>
+        <h2 class="section-title">Läs mer</h2>
+        <p class="section-desc">Bakgrund, resonemang och strategiska perspektiv för den som vill förstå mer.</p>
+        <div class="fordj-list" id="fordj-list"></div>
+      </div>
+    </section>
+
+    <!-- ── AVSLUT ────────────────────────────────────────────────── -->
+    <section class="closing-section" id="section-closing">
+      <div class="container">
+        <blockquote class="closing-quote" id="closing-quote">Laddar…</blockquote>
+        <div class="closing-punch" id="closing-punch"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>IT Alignment Portal · Internt strategidokument</p>
+    </div>
+  </footer>
+
+  <script src="icons.js"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
