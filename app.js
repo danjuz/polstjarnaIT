@@ -94,7 +94,7 @@ function renderModel(departments) {
 /* ── NORTH STAR ─────────────────────────────────────────────── */
 function renderNorthStar(ns) {
   document.getElementById('example-notice-ns').innerHTML =
-    ICONS.info + ' Detta är ett exempel, Polstjärnan ska sättas av IT-ledningen';
+    ICONS.info + ' Detta är ett exempel, Polstjärnan ska sättas av CIO med stöd av IT-ledningen';
 
   const nsScope = document.getElementById('ns-scope');
   if (nsScope && ns.scope) nsScope.textContent = ns.scope;
